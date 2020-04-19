@@ -21,3 +21,8 @@ The following guides illustrate how to use some features concretely:
 * [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
 * [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
 
+### Implementation References
+Used the follow tutorials:
+
+* [Spring_structure](https://www.youtube.com/watch?v=vtPkZShrvXQ)
+* [CRUD_Mongodb](https://bezkoder.com/spring-boot-mongodb-crud/)

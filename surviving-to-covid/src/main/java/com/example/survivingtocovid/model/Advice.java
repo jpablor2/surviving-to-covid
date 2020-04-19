@@ -1,15 +1,19 @@
 package com.example.survivingtocovid.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 import java.util.UUID;
 
+@Document(collection = "Advice")
 public class Advice {
     private List<String> instructions;
     private String onlineAcademyUrl;
     private String category;
     private String activityName;
+    @Id
     private UUID id;
 
 
@@ -30,32 +34,16 @@ public class Advice {
         return instructions;
     }
 
-    public void setInstructions(List<String> instructions) {
-        this.instructions = instructions;
-    }
-
     public String getOnlineAcademyUrl() {
         return onlineAcademyUrl;
-    }
-
-    public void setOnlineAcademyUrl(String onlineAcademyUrl) {
-        this.onlineAcademyUrl = onlineAcademyUrl;
     }
 
     public String getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
     public String getActivityName() {
         return activityName;
-    }
-
-    public void setActivityName(String activityName) {
-        this.activityName = activityName;
     }
 
     public UUID getId() {
@@ -64,5 +52,21 @@ public class Advice {
 
     public void setId(UUID id) {
         this.id = id;
+    }
+
+    public void setInstructions(List<String> instructions) {
+        this.instructions = instructions;
+    }
+
+    public void setOnlineAcademyUrl(String onlineAcademyUrl) {
+        this.onlineAcademyUrl = onlineAcademyUrl;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public void setActivityName(String activityName) {
+        this.activityName = activityName;
     }
 }
